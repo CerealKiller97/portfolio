@@ -1,0 +1,80 @@
+header {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  hgroup {
+    text-align: center;
+    position:absolute;
+    h1 {
+      margin-bottom: 0.25em;
+    }
+    img {
+      width:200px; 
+    }
+    p {
+      margin-top: 0;
+      @include heading(1.5em ,0.25em);
+    }
+    a {
+      @include button(1em, $primary, $secondary);
+    }
+  }
+
+  ul {
+    position: absolute;
+    left: -5em;
+    bottom: 8em;
+    padding: 0px;
+    display: flex;
+    margin: 0;
+    transform: rotate(-90deg);
+    li {
+      padding: 0 1em;
+      @include heading(0.85em, 0.1em);
+      text-transform: uppercase;
+      font-weight: 700;
+      &:hover {
+        transition: .2s linear;
+        color: $secondary;
+      }
+    }
+    @media screen and (max-width:750px) {
+      left: 50%;
+      bottom: 2em;
+      transform: translate(-50% ,0);
+    }
+  }
+
+  #toggle {
+    width: 40px;
+    height: 25px;
+    position: fixed;
+    top: 2em;
+    left: 2em;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    cursor: pointer;
+    z-index: 11;
+    span {
+      width: 100%;
+      height: .22em;
+      background-color: $secondary;
+      display: block;
+      transform: skew(-30deg);
+      @include transitionElastic(width);
+    }
+    span:nth-child(2) {
+      width: 50%;
+    }
+    span:nth-child(3) {
+      width: 33%;
+    }
+    &:hover {
+     > span {
+       width: 100%;
+     } 
+    }
+  }
+}

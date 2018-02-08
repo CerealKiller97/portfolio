@@ -1,0 +1,30 @@
+aside {
+  width: 600px;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: -700px;
+  background-color:$bg; 
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-right: 2.5px solid $secondary;
+  transform: skew(-7.5deg);
+  @include transitionElastic(left);
+  ul {
+    padding: 0;
+    transform: skew(7.5deg);
+    li {
+      @include heading(2em,0.1em);
+      padding: 0.5em 0em;
+      &:hover {
+        transition: .2s linear;
+        color: $secondary;
+      }
+    }
+  }
+}
+.active {
+  left: -100px;    
+}
