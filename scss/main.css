@@ -484,7 +484,7 @@ p {
 }
 
 ::-webkit-scrollbar {
-  width: 2px;
+  width: 2.5px;
 }
 
 ::-webkit-scrollbar-thumb {
