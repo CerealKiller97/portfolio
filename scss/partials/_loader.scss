@@ -6,4 +6,48 @@
   height: 100vh;
   z-index: 20;
   background: $bg;
+  opacity: 100%;
+  transition: opacity 1s ease;
+  span {
+    position: absolute;
+    left: -100vw;
+    transform: skew(-25deg) translate(-50%, -50%);
+    animation-duration: 3s;
+  }
+  span:nth-child(1) {
+    top: 60%;
+    width: 50vw;
+    height: 5vh;
+    display: block;
+    background-color: $primary;
+    animation-name: loading;
+  }
+  span:nth-child(2) {
+    top: 50%;
+    width: 90vw;
+    height: 10vh;
+    display: block;
+    background-color: $secondary;
+    animation-name: loading;
+  }
+  span:nth-child(3) {
+    top: 40%;
+    width: 50vw;
+    height: 5vh;
+    display: block;
+    background-color: $primary;
+    animation-name: loading;
+  }
+}
+.done {
+  display: none;
+}
+
+.opacity {
+  opacity: 0;
+}
+
+@keyframes loading {
+  0%   {left: -100vw}
+  100%  {left: 150vw}
 }

@@ -473,12 +473,10 @@ h1 {
   }
 }
 
-h2 {
-  font-size: 2em;
-  letter-spacing: 0.1em;
-}
-
-p {
+/* h2 {
+  @include heading(2em, .1em);
+} */
+p, h2 {
   font-weight: 300;
   letter-spacing: 0.05em;
 }
@@ -683,5 +681,73 @@ aside ul li:hover {
   height: 100vh;
   z-index: 20;
   background: #151515;
+  opacity: 100%;
+  -webkit-transition: opacity 1s ease;
+  transition: opacity 1s ease;
+}
+
+#loader span {
+  position: absolute;
+  left: -100vw;
+  -webkit-transform: skew(-25deg) translate(-50%, -50%);
+          transform: skew(-25deg) translate(-50%, -50%);
+  -webkit-animation-duration: 3s;
+          animation-duration: 3s;
+}
+
+#loader span:nth-child(1) {
+  top: 60%;
+  width: 50vw;
+  height: 5vh;
+  display: block;
+  background-color: #ffffff;
+  -webkit-animation-name: loading;
+          animation-name: loading;
+}
+
+#loader span:nth-child(2) {
+  top: 50%;
+  width: 90vw;
+  height: 10vh;
+  display: block;
+  background-color: #006DF0;
+  -webkit-animation-name: loading;
+          animation-name: loading;
+}
+
+#loader span:nth-child(3) {
+  top: 40%;
+  width: 50vw;
+  height: 5vh;
+  display: block;
+  background-color: #ffffff;
+  -webkit-animation-name: loading;
+          animation-name: loading;
+}
+
+.done {
+  display: none;
+}
+
+.opacity {
+  opacity: 0;
+}
+
+@-webkit-keyframes loading {
+  0% {
+    left: -100vw;
+  }
+  100% {
+    left: 150vw;
+  }
+}
+
+@keyframes loading {
+  0% {
+    left: -100vw;
+  }
+  100% {
+    left: 150vw;
+  }
 }
 /*# sourceMappingURL=main.css.map */
