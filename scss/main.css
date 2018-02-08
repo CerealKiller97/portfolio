@@ -518,7 +518,7 @@ header hgroup img {
   width: 200px;
 }
 
-header hgroup p {
+header hgroup h2 {
   margin-top: 0;
   font-size: 1.5em;
   letter-spacing: 0.25em;
@@ -673,5 +673,15 @@ aside ul li:hover {
 
 .active {
   left: -100px;
+}
+
+#loader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 20;
+  background: #151515;
 }
 /*# sourceMappingURL=main.css.map */
