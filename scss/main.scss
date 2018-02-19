@@ -2,7 +2,6 @@
 @import './_variables.scss';
 @import './_mixins.scss';
 
-
 body {
   background-color: $bg;
   color: $primary;
@@ -30,7 +29,6 @@ p, h2 {
   font-weight: 300;
   letter-spacing: 0.05em;
 }
-
 
 ::-webkit-scrollbar {
   width: 2.5px;

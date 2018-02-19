@@ -514,6 +514,7 @@ header hgroup h1 {
 
 header hgroup img {
   width: 200px;
+  fill: chartreuse;
 }
 
 header hgroup h2 {
